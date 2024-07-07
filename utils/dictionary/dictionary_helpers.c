@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary_helpers.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 02:30:08 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 03:12:39 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 13:13:59 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	process_line(char *line, t_dict_entry **head)
 		{
 			free(line);
 			free_dictionary(*head);
-			write(1, "Dict Error\n", 11);
+			write(2, "Dict Error\n", 11);
 		}
 	}
 }

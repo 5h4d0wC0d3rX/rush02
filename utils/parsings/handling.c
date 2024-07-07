@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handling.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 23:59:43 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 00:18:27 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 17:06:22 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ void	print_tens_and_units(t_dict_entry *dict,
 	write(1, word, ft_strlen(word));
 	if (group[len - 1] != '0')
 	{
-		write(1, "-", 1);
+		if (!(ft_strcmp("dict/numbers.dict", dict->name)))
+			write(1, "-", 1);
+		else
+			write(1, " ", 1);
 		buffer[0] = group[len - 1];
 		buffer[1] = '\0';
 		word = fetch_tens_word(dict, buffer);

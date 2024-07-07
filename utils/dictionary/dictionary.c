@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 02:29:36 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 03:21:03 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 13:14:03 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_dict_entry	*load_dictionary(const char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		write(1, "Dict Error\n", 11);
+		write(2, "Dict Error\n", 11);
 		return (NULL);
 	}
 	head = read_lines_from_file(fd);

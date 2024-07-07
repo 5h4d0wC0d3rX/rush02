@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_helpers1.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 01:36:57 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 01:49:08 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 16:38:18 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_error(const char *message)
 {
-	write(1, message, ft_strlen(message));
+	write(2, message, ft_strlen(message));
 }
 
 int	is_valid_number(const char *str)
@@ -22,7 +22,7 @@ int	is_valid_number(const char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r')
 		str++;
 	if (*str == '-' || *str == '+')
-		str++;
+		return (0);
 	if (*str == '\0')
 		return (0);
 	while (*str)
@@ -47,7 +47,6 @@ void	handle_single_digit(t_dict_entry *dict, const char *number)
 	if (word)
 	{
 		write(1, word, ft_strlen(word));
-		write(1, "\n", 1);
 	}
 	else
 	{

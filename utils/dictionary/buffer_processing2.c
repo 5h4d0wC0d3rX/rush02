@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   buffer_processing2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 03:15:14 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 03:26:01 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 13:13:54 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ t_dict_entry	*read_lines_from_file(int fd)
 	line_info.line = malloc(line_info.capacity);
 	if (!line_info.line)
 	{
-		write(1, "Memory Error\n", 13);
+		write(2, "Memory Error\n", 13);
 		return (NULL);
 	}
 	head = process_file(fd, &line_info);

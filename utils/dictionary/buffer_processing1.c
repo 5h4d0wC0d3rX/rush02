@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   buffer_processing1.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 02:30:24 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 03:20:45 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 13:13:50 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	allocate_line_buffer(t_line_info *line_info)
 	new_line = malloc(line_info->capacity);
 	if (!new_line)
 	{
-		write(1, "Memory Error\n", 13);
+		write(2, "Memory Error\n", 13);
 		free(line_info->line);
 		return (0);
 	}

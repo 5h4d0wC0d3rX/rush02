@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_helpers2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 01:37:15 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 01:50:57 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 17:32:48 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	handle_non_zero_second_digit(t_dict_entry *dict, const char *number,
 {
 	char	*word;
 
-	write(1, "-", 1);
+	if (!(ft_strcmp("dict/numbers.dict", dict->name)))
+		write(1, "-", 1);
+	else
+		write(1, " ", 1);
 	buffer[0] = number[1];
 	buffer[1] = '\0';
 	word = get_word(dict, buffer);
@@ -34,7 +37,6 @@ void	handle_non_zero_second_digit(t_dict_entry *dict, const char *number,
 void	handle_word_output(char *word)
 {
 	write(1, word, ft_strlen(word));
-	write(1, "\n", 1);
 }
 
 void	handle_buffer_error(void)

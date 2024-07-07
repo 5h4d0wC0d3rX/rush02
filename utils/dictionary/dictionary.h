@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 02:30:38 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 03:12:11 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 17:04:49 by cbopp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 typedef struct s_dict_entry
 {
+	const char			*name;
 	char				*number;
 	char				*word;
 	struct s_dict_entry	*next;
