@@ -6,16 +6,16 @@
 /*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 21:22:05 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 10:45:11 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 11:43:42 by nerfy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "scale_words.h"
-#include "main_helpers1.h"
-#include "main_helpers2.h"
-#include "main_helpers3.h"
-#include "string_utils.h"
+# include "../main_helpers/main_helpers1.h"
+# include "../main_helpers/main_helpers2.h"
+# include "../main_helpers/main_helpers3.h"
+#include "../string_utils.h"
 
 #define BUFFER_SIZE 1024
 

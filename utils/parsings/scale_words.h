@@ -6,16 +6,16 @@
 /*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 22:10:16 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/07 10:48:13 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 11:42:35 by nerfy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALE_WORDS_H
 # define SCALE_WORDS_H
 
-# include "main_helpers1.h"
-# include "main_helpers2.h"
-# include "main_helpers3.h"
+# include "../main_helpers/main_helpers1.h"
+# include "../main_helpers/main_helpers2.h"
+# include "../main_helpers/main_helpers3.h"
 # include "dictionary.h"
 
 /*
