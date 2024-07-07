@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbopp <cbopp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fdi-tria <fdi-tria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:15:27 by cbopp             #+#    #+#             */
-/*   Updated: 2024/07/07 16:15:16 by cbopp            ###   ########.fr       */
+/*   Updated: 2024/07/07 21:18:17 by fdi-tria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	handle_scale(t_dict_entry *dict, int scale)
 		{
 			write(1, " ", 1);
 			write(1, scale_word, ft_strlen(scale_word));
-			write(1, " ", 1);
+			if (scale > 0)
+				write(1, " ", 1);
 		}
 		else
 			print_error("Dict Error\n");
