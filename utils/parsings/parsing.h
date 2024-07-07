@@ -6,16 +6,48 @@
 /*   By: nerfy <nerfy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 21:22:05 by nerfy             #+#    #+#             */
-/*   Updated: 2024/07/06 23:25:13 by nerfy            ###   ########.fr       */
+/*   Updated: 2024/07/07 10:45:11 by nerfy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSING_H
-# define PARSING_H
+#include <stdlib.h>
+#include "scale_words.h"
+#include "main_helpers1.h"
+#include "main_helpers2.h"
+#include "main_helpers3.h"
+#include "string_utils.h"
 
-void	convert_number_to_words(t_dict_entry *dict, const char *number);
-void	convert_group_to_words(t_dict_entry *dict,
-			const char *group, int scale);
-void	convert_large_number_to_words(t_dict_entry *dict, const char *number);
+#define BUFFER_SIZE 1024
 
-#endif
+static const char	*get_scale_string(int scale)
+{
+	const char	*scale_strings[] = {
+		"", "1000", "1000000", "1000000000", "1000000000000",
+		"1000000000000000", "1000000000000000000",
+		"1000000000000000000000", "1000000000000000000000000",
+		"1000000000000000000000000000",
+		"1000000000000000000000000000000",
+		"1000000000000000000000000000000000",
+		"1000000000000000000000000000000000000"
+	};
+
+	if (scale < 0
+		|| scale >= (int)(sizeof(scale_strings) / sizeof(scale_strings[0])))
+		return ("");
+	return (scale_strings[scale]);
+}
+
+const char	*get_scale_word(t_dict_entry *dict, int scale)
+{
+	char		buffer[BUFFER_SIZE];
+	const char	*scale_str;
+	char		*word;
+
+	scale_str = get_scale_string(scale);
+	ft_strcpy(buffer, scale_str);
+	word = get_word(dict, buffer);
+	if (word)
+		return (word);
+	else
+		return ("");
+}
